@@ -1,0 +1,14 @@
+{
+  // Welcher Haendler die Brille verkauft (Kennung aus traders/<id>).
+  // Jaeger = 5c0647fdd443bc2504c2d371 - bei ihm gibt es auch die T-7.
+  "Haendler": "5c0647fdd443bc2504c2d371",
+
+  // Ab welcher Haendlerstufe (1-4). Die T-7 gibt es bei Jaeger ab Stufe 4.
+  "Stufe": 4,
+
+  // Preis in Rubel. Die T-7 kostet bei Jaeger 17.388.000.
+  "Preis": 17388000,
+
+  // false = gar nicht beim Haendler, nur Flohmarkt/Beute.
+  "BeimHaendler": true
+}

@@ -1,0 +1,11 @@
+{
+  "itemId": "66f1c7a2b3d4e5f601a2b3c4",
+  "category": "T-7 Thermal",
+  "isFpsStuck": true,
+  "minFps": 60,
+  "maxFps": 60,
+  "isPixelated": false,
+  "verticalResolution": 240,
+  "isNoisy": false,
+  "isMotionBlurred": false
+}

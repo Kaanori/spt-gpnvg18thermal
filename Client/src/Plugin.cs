@@ -16,6 +16,9 @@
 //  Abhilfe: Fehlt die Nachtsicht-Komponente, haengen wir das Licht
 //  an den Klappschalter der Waermebild-Komponente. Fuer alle echten
 //  Nachtsichtgeraete laeuft das Original unveraendert.
+//
+//  Seit 1.1.0 zeichnet das Plugin ausserdem die Gehaeuse-Maske selbst
+//  (an/aus und justierbar im F12-Menue) - siehe Maske.cs.
 // ---------------------------------------------------------------
 using BepInEx;
 using EFT.InventoryLogic;
@@ -24,13 +27,14 @@ using HarmonyLib;
 
 namespace GPNVG18ThermalClient
 {
-    [BepInPlugin("com.kaan.gpnvg18thermal.client", "GPNVG-18 Thermal (Client)", "1.0.0")]
+    [BepInPlugin("com.kaan.gpnvg18thermal.client", "GPNVG-18 Thermal (Client)", "1.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         private void Awake()
         {
+            Maske.Binden(Config, Logger);
             new Harmony("com.kaan.gpnvg18thermal.client").PatchAll(typeof(Plugin).Assembly);
-            Logger.LogInfo("NightVisionDevice-Patch aktiv");
+            Logger.LogInfo("NightVisionDevice patch and housing mask active");
         }
     }
 
